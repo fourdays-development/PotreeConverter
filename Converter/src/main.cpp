@@ -51,7 +51,7 @@ Options parseArguments(int argc, char** argv) {
 	vector<string> source = args.get("source").as<vector<string>>();
 
 	if (source.size() == 0) {
-		cout << "PotreeConverter <source> -o <outdir>" << endl;
+		cout << "Truspace PotreeConverter <source> -o <outdir>" << endl;
 		cout << endl << "For a list of options, use --help or -h" << endl;
 
 		exit(1);
@@ -566,4 +566,5 @@ int main(int argc, char** argv) {
 
 
 	return 0;
+
 }
