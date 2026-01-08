@@ -21,12 +21,12 @@ jobs:
 
     steps:
     
+    - uses: actions/checkout@v4
+    
     - uses: awalsh128/cache-apt-pkgs-action@latest
       with:
         packages: libtbb-dev liblas-dev pdal libboost-dev-all
         version: 1.0
-
-    - uses: actions/checkout@v4
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
