@@ -36,13 +36,13 @@ Options parseArguments(int argc, char** argv) {
 	args.addArgument("title", "Page title used when generating a web page");
 
 	if (args.has("help")) {
-		cout << "PotreeConverter <source> -o <outdir>" << endl;
+		cout << "Truspace PotreeConverter <source> -o <outdir>" << endl;
 		cout << endl << args.usage() << endl;
 		exit(0);
 	}
 
 	if (!args.has("source")) {
-		cout << "PotreeConverter <source> -o <outdir>" << endl;
+		cout << "Truspace PotreeConverter <source> -o <outdir>" << endl;
 		cout << endl << "For a list of options, use --help or -h" << endl;
 
 		exit(1);
@@ -568,3 +568,4 @@ int main(int argc, char** argv) {
 	return 0;
 
 }
+
