@@ -1,3 +1,4 @@
+
 # This starter workflow is for a CMake project running on multiple platforms. There is a different starter workflow if you just want a single platform.
 # See: https://github.com/actions/starter-workflows/blob/main/ci/cmake-single-platform.yml
 name: CMake on multiple platforms
@@ -45,6 +46,12 @@ jobs:
             c_compiler: cl
 
     steps:
+
+    - uses: awalsh128/cache-apt-pkgs-action@latest
+      with:
+        # Space delimited list of packages to install. Version can be specified optionally using APT command syntax of <name>=<version> (e.g. xdot=1.2-2).
+        packages: libboost-all-dev libtbb-dev liblas-dev pdal libpdal-dev # default is 
+        
     - uses: actions/checkout@v4
 
     - name: Set reusable strings
